@@ -1,12 +1,14 @@
-import React, { Fragment } from 'react';
+import React from 'react';
+import Login from './Login'
+import About from './About'
 
 const Content = () => {
 
   return ( 
-    <Fragment>
-      <p>login</p>
-      <p>about</p>
-    </Fragment>
+    <div id='homepage'>
+      <Login/>
+      <About/>
+    </div>
    );
 }
  

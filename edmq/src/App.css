@@ -1,3 +1,7 @@
+body {
+  color: white;
+}
+
 #background {
   position: absolute;
   min-width: 100vw;
@@ -14,7 +18,7 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: black;
   min-height: 10vh;
   width: 50vw;
   flex-direction: column;
@@ -22,4 +26,35 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+#loginForm {
+  display: flex;
+}
+
+#submit {
+  height: 25px;
+  margin-top: 15px;
+}
+
+#login {
+  display: flex;
+  width: 50vw;
+  height: 10vh;
+  background-color: #282c34;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginGroup {
+  display: flex;
+  flex-direction: column;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.loginForm {
+  border-radius: 5;
+  padding: 5px;
+  padding-right: 7vw;
 }
