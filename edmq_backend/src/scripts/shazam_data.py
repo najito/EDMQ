@@ -13,6 +13,10 @@ def get_title_artist(term):
     querystring = {"term": term, "locale": "en-US", "offset": "0","limit": "1"}
     search_response = requests.request("GET", shazam_url, headers=shazam_headers, params=querystring).text
     search_dict = json.loads(search_response)
+    if len(search_dict) == 0:
+        d['title'] = 'No title available.'
+        d['artist'] = 'No artist available.'
+        return d
     d['title'] = search_dict['tracks']['hits'][0]['track']['title']
     d['artist'] = search_dict['tracks']['hits'][0]['track']['subtitle']
     return d
